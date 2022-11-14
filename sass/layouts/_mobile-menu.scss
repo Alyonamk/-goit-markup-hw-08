@@ -1,22 +1,32 @@
 .mobile-menu {
-    position: absolute;
+    position: fixed;
     top: 0;
-    background-color: var(--background-color);
+    background-color: #ffffff;
     width: 100vw;
     height: 100vh;
-    position: fixed;
-    padding-left: 40px;
-    padding-bottom: 48px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    overflow: auto;
+    z-index: 1;
+    padding: 40px 10px;
 
-    @media screen and (min-width: 768px) {
-        display: none;
+    >.container {
+        height: 90%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        overflow: auto;
+
+        @include mobile {
+            height: 100%;
+            padding: 48px 40px;
+        }
     }
+
 }
 
+
+.mobile-menu__link.current {
+    position: relative;
+    color: var(--second-text-color);
+}
 
 .menu-close-btn {
     margin-left: auto;
@@ -56,6 +66,11 @@
     // line-height: 1.17;
     // letter-spacing: 0.02em;
     color: var(--second-text-color);
+
+    @media screen and (min-width: 320px) and (max-width: 479px) {
+    @include font(500, 30px, 1.17, 0.02em);
+    }
+
 }
 
 .mobile-connect__link {
@@ -69,6 +84,7 @@
     // letter-spacing: 0.02em;
     color: var(--owner-text-color);
     padding-top: 32px;
+
     &:focus {
         color: var(--second-text-color);
     }
@@ -87,6 +103,7 @@
     // line-height: 1.17;
     // letter-spacing: 0.02em;
     color: #212121;
+
     &:hover,
     &:focus {
         color: var(--second-text-color);
@@ -97,6 +114,10 @@
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
+    @media screen and (min-width: 320px) and (max-width: 479px) {
+     gap: 40px;
+    }
+
 }
 
 .mobile__networking-line::before {
@@ -106,6 +127,9 @@
     height: 1px;
     width: 22px;
     margin-right: 10px;
+    @media screen and (max-width: 479px) {
+        display:none;
+    }
 }
 
 .mobile__networking-link {
@@ -117,4 +141,18 @@
     // line-height: 1.22;
     // letter-spacing: 0.02em;
     color: var(--second-text-color);
+    @media screen and (min-width: 320px) and (max-width: 479px) {
+    @include font(500, 20px, 1.2, 0.02em);
+     display: flex;
+     margin-left: 10px;
+     margin-right: 10px;
+     width: 100px
+    }
+
 }
+
+// .mobile-menu__list {
+//     margin-bottom: 302px;
+//     @media screen and (min-width: 320px) and (max-width: 480px) {
+//         margin-bottom: 302px;
+//     }

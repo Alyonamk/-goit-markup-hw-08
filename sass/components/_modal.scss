@@ -186,12 +186,6 @@
     align-items: center;
 }
 
-// .modal-agree label {
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-//     color: var(--main-text-color);
-// }
 
 .modal-agree {
     margin-bottom: 30px;
@@ -200,6 +194,11 @@
     @media screen and (max-width: 1199px) {
         font-size: 12px;
         line-height: 1.16;
+    }
+
+    @media screen and (min-width: 320px) and (max-width: 479px) {
+        text-align: center;
+        font-size: 8px;
     }
 }
 
@@ -226,6 +225,11 @@
         background-size: contain;
         background-origin: border-box;
     }
+
+    @media screen and (min-width: 320px) and (max-width: 479px) {
+        width: 9px;
+        height: 9px;       
+    }
 }
 
 .checkbox-input {
@@ -241,7 +245,11 @@
     cursor: pointer;
     color: var(--owner-text-color);
     line-height: 1.71;
+    @media screen and (min-width: 320px) and (max-width: 479px) {
+        margin-left: 3px;
+    }    
 }
+
 
 .check-icon {
     display: flex;
