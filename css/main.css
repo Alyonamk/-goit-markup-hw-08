@@ -15,7 +15,7 @@
   --linear-gradient: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4));
 }
 
-.sign-btn, .social-link, .team__social-link, .picture__list-text, .header > .header__container, .modal-btn, .checkbox-check, .modal-agree, .modal-form, .btn-close {
+.sign-btn, .social-link, .team__social-link, .picture__list-text, .header > .header__container, .modal-btn, .checkbox-check, .modal-form, .btn-close {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -104,16 +104,14 @@ body {
 }
 
 .mobile-menu {
-  position: fixed;
+  position: absolute;
   top: 0;
-  background-color: #ffffff;
+  background-color: var(--background-color);
   width: 100vw;
   height: 100vh;
-  z-index: 1;
-  padding: 40px 10px;
-}
-.mobile-menu > .container {
-  height: 100%;
+  position: fixed;
+  padding-left: 40px;
+  padding-bottom: 48px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -125,6 +123,11 @@ body {
       -ms-flex-pack: justify;
           justify-content: space-between;
   overflow: auto;
+}
+@media screen and (min-width: 768px) {
+  .mobile-menu {
+    display: none;
+  }
 }
 
 .menu-close-btn {
@@ -157,11 +160,6 @@ body {
 .mobile-connect {
   margin-bottom: 50px;
 }
-@media screen and (min-width: 320px) and (max-width: 767px) {
-  .mobile-connect {
-    margin-bottom: 64px;
-  }
-}
 
 .mobile-connect__tel {
   font-weight: 500;
@@ -170,9 +168,6 @@ body {
   letter-spacing: 0.02em;
   font-family: "Roboto";
   font-style: normal;
-  color: var(--owner-text-color);
-}
-.mobile-connect__tel:hover, .mobile-connect__tel:focus {
   color: var(--second-text-color);
 }
 
@@ -187,7 +182,7 @@ body {
   color: var(--owner-text-color);
   padding-top: 32px;
 }
-.mobile-connect__link:hover, .mobile-connect__link:focus {
+.mobile-connect__link:focus {
   color: var(--second-text-color);
 }
 
@@ -233,9 +228,6 @@ body {
   letter-spacing: 0.02em;
   font-family: "Roboto";
   font-style: normal;
-  color: var(--owner-text-color);
-}
-.mobile__networking-link:hover, .mobile__networking-link:focus {
   color: var(--second-text-color);
 }
 
@@ -295,6 +287,8 @@ body {
   margin: 0 auto;
   padding-left: 15px;
   padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
 }
 @media screen and (min-width: 480px) {
   .container {
@@ -383,9 +377,8 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  padding: 40px;
-  width: 528px;
-  min-height: 581px;
+  padding: 35px 20px;
+  width: 300px;
   background-color: var(--background-color);
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
@@ -396,26 +389,17 @@ body {
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
 }
-@media screen and (min-width: 320px) {
-  .modal {
-    width: 100%;
-  }
-}
 @media screen and (min-width: 480px) {
   .modal {
     width: 450px;
+    padding: 40px;
   }
 }
 @media screen and (min-width: 1200px) {
   .modal {
     width: 528px;
+    min-height: 581px;
   }
-}
-
-.is-hidden {
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
 }
 
 .backdrop.is-hidden {
@@ -462,6 +446,19 @@ body {
   margin-bottom: 12px;
   text-align: center;
   color: var(--font-main-color);
+}
+@media screen and (min-width: 480px) {
+  .modal-form {
+    font-size: 20px;
+  }
+}
+@media screen and (min-width: 1199px) {
+  .modal-form {
+    margin-top: 2px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 
 .form-field {
@@ -578,9 +575,23 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   margin-bottom: 30px;
-  -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.modal-agree {
+  margin-bottom: 30px;
+  line-height: 1.71;
+}
+@media screen and (max-width: 1199px) {
+  .modal-agree {
+    font-size: 12px;
+    line-height: 1.16;
+  }
 }
 
 .checkbox-check {
@@ -592,6 +603,8 @@ body {
           justify-content: center;
   width: 16px;
   height: 15px;
+  background-size: contain;
+  background-origin: border-box;
   fill: transparent;
   cursor: pointer;
   -webkit-transition: fill 250ms var(--timing-function), border-color 250ms var(--timing-function);
@@ -766,7 +779,6 @@ body {
 
 .header {
   height: 60px;
-  padding: 24px 0;
   border-bottom: 1px solid var(--border-color);
 }
 @media screen and (min-width: 768px) {
@@ -785,6 +797,12 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.header > .header__container {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .nav {
@@ -809,14 +827,14 @@ body {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
     margin-left: auto;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
   }
 }
 
@@ -947,6 +965,7 @@ body {
       -ms-flex-positive: 1;
           flex-grow: 1;
   height: 400px;
+  max-width: 1600px;
   text-align: center;
   padding-top: 200px;
   padding-bottom: 200px;
@@ -1318,24 +1337,27 @@ body {
 @media screen and (min-width: 320px) and (max-width: 767px) {
   .customers__item {
     width: calc((100% - 30px) / 2);
+    height: 100%;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .customers__item {
     width: calc((100% - 60px) / 3);
+    height: 100%;
   }
 }
 @media screen and (min-width: 1200px) {
   .customers__item {
     width: calc((100% - 150px) / 6);
+    height: 100%;
   }
 }
 
 .customers__link {
   border: 1px solid var(--icon-color);
   border-radius: 4px;
-  width: 170px;
   height: 92px;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

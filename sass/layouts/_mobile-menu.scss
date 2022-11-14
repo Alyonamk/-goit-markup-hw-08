@@ -1,19 +1,22 @@
 .mobile-menu {
-    position: fixed;
+    position: absolute;
     top: 0;
-    background-color: #ffffff;
+    background-color: var(--background-color);
     width: 100vw;
     height: 100vh;
-    z-index: 1;
-    padding: 40px 10px;
-    >.container {
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        overflow: auto;
+    position: fixed;
+    padding-left: 40px;
+    padding-bottom: 48px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: auto;
+
+    @media screen and (min-width: 768px) {
+        display: none;
     }
 }
+
 
 .menu-close-btn {
     margin-left: auto;
@@ -42,9 +45,6 @@
 
 .mobile-connect {
     margin-bottom: 50px;
-    @media screen and (min-width: 320px) and (max-width: 767px) {
-        margin-bottom: 64px;
-    }
 }
 
 .mobile-connect__tel {
@@ -55,11 +55,7 @@
     // font-size: 34px;
     // line-height: 1.17;
     // letter-spacing: 0.02em;
-    color: var(--owner-text-color);
-    &:hover,
-    &:focus {
-        color: var(--second-text-color);
-    }
+    color: var(--second-text-color);
 }
 
 .mobile-connect__link {
@@ -73,8 +69,6 @@
     // letter-spacing: 0.02em;
     color: var(--owner-text-color);
     padding-top: 32px;
-
-    &:hover,
     &:focus {
         color: var(--second-text-color);
     }
@@ -122,10 +116,5 @@
     // font-size: 18px;
     // line-height: 1.22;
     // letter-spacing: 0.02em;
-    color: var(--owner-text-color);
-
-    &:hover,
-    &:focus {
-        color: var(--second-text-color);
-    }
+    color: var(--second-text-color);
 }

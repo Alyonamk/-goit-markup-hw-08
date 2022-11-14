@@ -11,22 +11,25 @@
 .customers__item {
     @media screen and (min-width: 320px) and (max-width: 767px) {
         width: calc((100% - 30px) / 2);
+        height: 100%;
     }
 
     @media screen and (min-width: 768px) and (max-width: 1199px) {
         width: calc((100% - 60px) / 3);
+        height: 100%;
     }
 
     @media screen and (min-width: 1200px) {
         width: calc((100% - 150px) / 6);
+        height: 100%;
     }
 
 }
 
 .customers__link {
     @include border(1px solid var(--icon-color), 4px);
-    width: 170px;
     height: 92px;
+    width: 100%;
     // border: 1px solid var(--icon-color);
     // border-radius: 4px;
     // @extend %align-element;

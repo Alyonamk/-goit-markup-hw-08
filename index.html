@@ -28,7 +28,7 @@
           <a class="logo" href="./index.html" lang="en"
             >Web<span class="logo__web logo--dark">Studio</span></a>
           <ul class="menu list">
-            <li class="menu__item"><a class="menu__link link active current" href="./index.html">Студія</a></li>
+            <li class="menu__item"><a class="menu__link link current" href="./index.html">Студія</a></li>
             <li class="menu__item"><a class="menu__link link" href="./portfolio.html">Портфоліо</a></li>
             <li class="menu__item"><a class="menu__link link"  href="#" >Контакти</a></li>
           </ul>
@@ -139,30 +139,27 @@
           <h2 class="section__title">Чим ми займаємося</h2>
           <ul class="picture__list list">
             <li class="picture__list-photo">
-              <img
-                src="./images/about-1.jpg"
-                alt="планшет, клавіатура, мишка"
-                width="370"
-                height="294"
-              />
+              <picture>
+                <source scrset="./images/img-about-desktop/about-desktop1X1.jpg 1x, 
+                ./images/img-team-desktop/about-desktop1X2.jpg 2x" media="(min-width: 1200px)" />
+                <img src="./images/about-1.jpg" alt="планшет, клавіатура, мишка" width="370">
+              </picture>
               <p class="picture__list-text">Десктопні додатки</p>
             </li>
             <li class="picture__list-photo">
-              <img
-                src="./images/about-2.jpg"
-                alt="телефон"
-                width="370"
-                height="294"
-              />
+              <picture>
+                <source scrset="./images/img-about-desktop/about-desktop2X1.jpg 1x, 
+                ./images/img-team-desktop/about-desktop2X2.jpg 2x" media="(min-width: 1200px)" />
+                <img src="./images/about-2.jpg" alt="телефон" width="370">
+              </picture>
               <p class="picture__list-text">Мобільні додатки</p>
             </li>
             <li class="picture__list-photo">
-              <img
-                src="./images/about-3.jpg"
-                alt="планшет, палітра кольорів"
-                width="370"
-                height="294"
-              />
+              <picture>
+                <source scrset="./images/img-about-desktop/about-desktop3X1.jpg 1x, 
+                ./images/img-team-desktop/about-desktop3X2.jpg 2x" media="(min-width: 1200px)" />
+                <img src="./images/about-3.jpg" alt="планшет" width="370">
+              </picture>
               <p class="picture__list-text">Дизайнерські рішення</p>
             </li>
           </ul>
@@ -175,10 +172,10 @@
             <li class="team__list-picture">
               <picture>
                 <source srcset="
-                 ./images/img-team-mobile/team-1X1-mobile.jpg 1x, 
-                 ./images/img-team-mobile/team-1X2-mobile.jpg 2x"
-
-                 media="(max-width: 767px)"
+                 ./images/img-team-desktop/team-1-desktopX1.jpg 1x, 
+                 ./images/img-team-desktop/team-1-desktopX2.jpg 2x" 
+                 
+                 media="(min-width: 1200px)"
                 />
                 <source srcset="
                  ./images/img-team-tablet/team-1X1-tablet.jpg 1x, 
@@ -186,10 +183,10 @@
                   media="(min-width: 768px)"
                 />
                 <source srcset="
-                 ./images/img-team-desktop/team-1-desktopX1.jpg 1x, 
-                 ./images/img-team-desktop/team-1-desktopX2.jpg 2x" 
-                 
-                 media="(min-width: 1200px)"
+                 ./images/img-team-mobile/team-1X1-mobile.jpg 1x, 
+                 ./images/img-team-mobile/team-1X2-mobile.jpg 2x"
+
+                 media="(max-width: 767px)"
                 />
                 <img 
                  src="./images/team-1.jpg" 
@@ -241,10 +238,10 @@
             <li class="team__list-picture">
               <picture>
                 <source srcset="
-                 ./images/img-team-mobile/team-2X1-mobile.jpg 1x, 
-                 ./images/img-team-mobile/team-2X2-mobile.jpg 2x" 
+                 ./images/img-team-desktop/team-2-desktopX1.jpg 1x, 
+                 ./images/img-team-desktop/team-2-desktopX2.jpg 2x" 
                  
-                 media="(max-width: 767px)" 
+                 media="(min-width: 1200px)" 
                 />
                 <source srcset="
                  ./images/img-team-tablet/team-2X1-tablet.jpg 1x, 
@@ -253,10 +250,10 @@
                  media="(min-width: 768px)" 
                 />
                 <source srcset="
-                 ./images/img-team-desktop/team-2-desktopX1.jpg 1x, 
-                 ./images/img-team-desktop/team-2-desktopX2.jpg 2x" 
+                 ./images/img-team-mobile/team-2X1-mobile.jpg 1x, 
+                 ./images/img-team-mobile/team-2X2-mobile.jpg 2x" 
                  
-                 media="(min-width: 1200px)" 
+                 media="(max-width: 767px)" 
                 />
                 <img
                  src="./images/team-2.jpg" 
@@ -308,10 +305,10 @@
             <li class="team__list-picture">
               <picture>
                <source srcset="
-                ./images/img-team-mobile/team-3X1-mobile.jpg 1x, 
-                ./images/img-team-mobile/team-3X2-mobile.jpg 2x" 
+                ./images/img-team-desktop/team-3-desktopX1.jpg 1x, 
+                ./images/img-team-desktop/team-3-desktopX2.jpg 2x" 
                 
-                media="(max-width: 767px)" 
+                media="(min-width: 1200px)" 
               />
               <source srcset="
                 ./images/img-team-tablet/team-3X1-tablet.jpg 1x, 
@@ -320,10 +317,10 @@
                 media="(min-width: 768px)" 
               />
               <source srcset="
-                ./images/img-team-desktop/team-3-desktopX1.jpg 1x, 
-                ./images/img-team-desktop/team-3-desktopX2.jpg 2x" 
+                ./images/img-team-mobile/team-3X1-mobile.jpg 1x, 
+                ./images/img-team-mobile/team-3X2-mobile.jpg 2x" 
                 
-                media="(min-width: 1200px)" 
+                media="(max-width: 767px)" 
               />
               <img src="./images/team-3.jpg" 
                alt="Микола Тарасов" 
@@ -374,9 +371,9 @@
             <li class="team__list-picture">
               <picture>
                 <source srcset="
-                  ./images/img-team-mobile/team-4X1-mobile.jpg 1x, 
-                  ./images/img-team-mobile/team-4X2-mobile.jpg 2x" 
-                  media="(max-width: 767px)" 
+                  ./images/img-team-desktop/team-4-desktopX1.jpg 1x, 
+                  ./images/img-team-desktop/team-4-desktopX2.jpg 2x" 
+                  media="(min-width: 1200px)"
                 />
                <source 
                  srcset="
@@ -386,9 +383,9 @@
                 />
                 <source 
                  srcset="
-                  ./images/img-team-desktop/team-4-desktopX1.jpg 1x, 
-                  ./images/img-team-desktop/team-4-desktopX2.jpg 2x" 
-                  media="(min-width: 1200px)" 
+                  ./images/img-team-mobile/team-4X1-mobile.jpg 1x, 
+                  ./images/img-team-mobile/team-4X2-mobile.jpg 2x" 
+                  media="(max-width: 767px)"  
                 />
               <img 
                src="./images/team-4.jpg" 
@@ -559,7 +556,7 @@
         </div>
       </div>
     </footer>
-    <div class="backdrop is-hidden" data-modal>
+    <div class="backdrop" data-modal>
       <div class="modal">
         <button type="button" class="btn-close" data-modal-close>
           <svg class="btn-icon" width="18" height="18">
