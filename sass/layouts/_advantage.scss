@@ -1,8 +1,4 @@
 .advantages {
-    padding-top: 60px;
-    @media screen and (min-width: 768px) {
-     padding-top: 94px;
-    }
 
     @media screen and (min-width: 1200px) {
         padding-bottom: 0;
@@ -63,7 +59,7 @@ $Icons: "antenna", "clock", "diagram", "astronaut";
 .info__list-title {
     @include font(700, 10px, 1.14, null);
     font-size: inherit;
-    // margin-bottom: 10px;
+    margin-bottom: 10px;
     // font-weight: 700;
     // line-height: 1.14;
     text-transform: uppercase;
