@@ -7,19 +7,9 @@
 }
 
 .portfolio__item {
-
-    @media screen and (min-width: 768px) {
-        width: calc((100% - 15px) / 1);
-    }
-    
-    @media screen and (min-width: 768px) {
-        width: calc((100% - 30px) / 2);
-    }
-    
-    @media screen and (min-width: 1200px) {
-        width: calc((100% - 60px) / 3);
-    }
-
+    display: block;
+    width: calc((100% - 60px) / 3);
+    position: relative;
 }
 
 .portfolio__item-link {

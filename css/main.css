@@ -1754,7 +1754,7 @@ body {
 
 .portfolio__item {
   display: block;
-  width: calc((100% - 60px) / 3);
+   width: calc((100% - 60px) / 3);
   position: relative;
 }
 .portfolio__item:hover .portfolio__description-text {
