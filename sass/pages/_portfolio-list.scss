@@ -2,18 +2,24 @@
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
+    width: 100%;
+    align-items: center;
 }
 
 .portfolio__item {
-    display: block;
-    width: calc((100% - 60px) / 3);
-    position: relative;
-    &:hover .portfolio__description-text {
-        transform: translateY(0);
+
+    @media screen and (min-width: 768px) {
+        width: calc((100% - 15px) / 1);
     }
-    &:focus .portfolio__description-text {
-        transform: translateY(0);
+    
+    @media screen and (min-width: 768px) {
+        width: calc((100% - 30px) / 2);
     }
+    
+    @media screen and (min-width: 1200px) {
+        width: calc((100% - 60px) / 3);
+    }
+
 }
 
 .portfolio__item-link {
